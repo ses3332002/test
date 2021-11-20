@@ -1,4 +1,8 @@
 main {
-  background-color: rgb(240, 237, 61);
-  color: rgb(12, 16, 219);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
 }

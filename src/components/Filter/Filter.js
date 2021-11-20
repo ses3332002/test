@@ -1,18 +1,18 @@
-import {useState} from 'react';
-function Filter() {
-     let [selectorValue, setSelectorValue] = useState('all');
-    return(<>
-            <select
-            value={selectorValue}
-            onChange={e => {
-                setSelectorValue(e.target.value);
-            }}
-            >
-            <option value="male">male</option>
-            <option value="female">female</option>
-            <option value="all">all</option>
-            </select>
-    </>);
-}
+import { Select } from 'antd';
+import 'antd/dist/antd.css';
 
-export default Filter
+const { Option } = Select;
+
+export default function Filter({ selectedGender, setSelectedGender }) {
+  function handleChange(value) {
+    setSelectedGender(value);
+  }
+
+  return (
+    <Select style={{ width: 120, margin: 20 }} value={selectedGender} onChange={handleChange}>
+      <Option value="all">all</Option>
+      <Option value="male">male</Option>
+      <Option value="female">female</Option>
+    </Select>
+  );
+}

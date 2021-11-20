@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 import './Welcome.css';
 
-function Welcome() {
-  return <main className="content">Welcome to Users test project
-  <Link to='/users'>
-  <button>Start</button>
-  </Link>
-  </main>;
+export default function Welcome() {
+  return (
+    <main>
+      <h1>Welcome to Users test project</h1>
+      <Link to="/users">
+        <Button>Start</Button>
+      </Link>
+    </main>
+  );
 }
-
-export default Welcome;
